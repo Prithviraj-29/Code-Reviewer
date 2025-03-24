@@ -9,7 +9,7 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post('https://code-reviewer-dv26.onrender.com/get-review', { code });
       setReviewedCode(response.data || 'No review available');
       console.log('Review Response:', response.data);
     } catch (error) {
